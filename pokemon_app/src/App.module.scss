@@ -1,0 +1,34 @@
+.appBackground {
+  background: deepskyblue;
+  color: yellow;
+}
+
+.appData {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 100%;
+}
+
+.pokemons {
+  flex: 1 1 auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.appFooter {
+  flex: 0 0 10%;
+  display: flex;
+  align-items: center;
+}

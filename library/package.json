@@ -1,0 +1,35 @@
+{
+  "name": "library",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "antd": "^3.11.1",
+    "classnames": "^2.2.6",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "flow": "flow",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "babel-preset-react-app": "^6.1.0",
+    "flow-bin": "^0.87.0"
+  }
+}

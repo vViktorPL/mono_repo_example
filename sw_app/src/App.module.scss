@@ -1,0 +1,16 @@
+.appBackground {
+  background: black;
+}
+
+.appContent {
+  flex: 1 0 auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.appFooter {
+  flex: 0 0 10%;
+}

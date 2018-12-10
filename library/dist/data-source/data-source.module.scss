@@ -1,0 +1,14 @@
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.error {
+  flex-direction: column;
+}
+
+.errorBtn {
+  margin: 20px;
+}
