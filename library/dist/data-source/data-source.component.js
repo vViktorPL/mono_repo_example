@@ -39,19 +39,21 @@ function (_Component) {
         error: null,
         fetchedUrl: _this.props.url
       }, function () {
-        return fetch(_this.props.url).then(function (data) {
-          return data.json();
-        }).then(function (result) {
-          return _this.setState({
-            data: result,
-            error: null,
-            loading: false
-          });
-        }).catch(function () {
-          _this.setState({
-            loading: false,
-            data: null,
-            error: "Something went wrong"
+        return setTimeout(function () {
+          return fetch(_this.props.url).then(function (data) {
+            return data.json();
+          }).then(function (result) {
+            return _this.setState({
+              data: result,
+              error: null,
+              loading: false
+            });
+          }).catch(function () {
+            _this.setState({
+              loading: false,
+              data: null,
+              error: "Something went wrong"
+            });
           });
         });
       });

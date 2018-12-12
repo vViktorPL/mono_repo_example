@@ -4,30 +4,31 @@ import _possibleConstructorReturn from "/Users/qh4r/tsh/mono_repo_example/librar
 import _getPrototypeOf from "/Users/qh4r/tsh/mono_repo_example/library/node_modules/@babel/runtime/helpers/esm/getPrototypeOf";
 import _inherits from "/Users/qh4r/tsh/mono_repo_example/library/node_modules/@babel/runtime/helpers/esm/inherits";
 import React, { PureComponent } from 'react';
-import * as styles from "./header.module.scss";
-export var Header =
+import { Modal as AntModal } from 'antd';
+import './modal.scss';
+export var Modal =
 /*#__PURE__*/
 function (_PureComponent) {
-  _inherits(Header, _PureComponent);
+  _inherits(Modal, _PureComponent);
 
-  function Header() {
-    _classCallCheck(this, Header);
+  function Modal() {
+    _classCallCheck(this, Modal);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Header).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(Modal).apply(this, arguments));
   }
 
-  _createClass(Header, [{
+  _createClass(Modal, [{
     key: "render",
     value: function render() {
-      return React.createElement("div", {
-        className: styles.headerContainer
-      }, React.createElement("img", {
-        className: styles.logo,
-        src: this.props.img,
-        alt: "logo"
+      return React.createElement(AntModal, Object.assign({}, this.props, {
+        title: null,
+        footer: null,
+        bodyStyle: {
+          backgroundColor: 'inherit'
+        }
       }));
     }
   }]);
 
-  return Header;
+  return Modal;
 }(PureComponent);

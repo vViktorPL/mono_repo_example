@@ -1,8 +1,8 @@
 // @flow
 import React, {PureComponent} from 'react';
-import * as styles from "./character-tile.module.scss";
+import * as styles from "./character-details.module.scss";
 
-export type CharacterTileProps = {
+export type CharacterDetailsProps = {
   name: string,
   height: string,
   mass: string,
@@ -12,13 +12,12 @@ export type CharacterTileProps = {
   birth_year: string,
   gender: string,
   url: string,
-  onClick: string => *,
 }
 
-export class CharacterTile extends PureComponent<CharacterTileProps> {
+export class CharacterDetails extends PureComponent<CharacterDetailsProps> {
   render() {
     return (
-      <div onClick={() => this.props.onClick(this.props.url)} className={styles.tile}>
+      <div  className={styles.tile}>
         {this.props.name}
       </div>
     )

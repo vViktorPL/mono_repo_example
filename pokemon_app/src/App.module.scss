@@ -1,34 +1,27 @@
 .appBackground {
-  background: deepskyblue;
-  color: yellow;
+  background: rgba(0, 192, 255, 0.97);
+  color: #fbff8b;
 }
 
-.appData {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 0 100%;
-}
-
-.pokemons {
-  flex: 1 1 auto;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1000px;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
+.pokemonTile {
+  background-color: #fbff8b;
+  color: #009bcf;
 }
 
 .appFooter {
   flex: 0 0 10%;
   display: flex;
   align-items: center;
+}
+
+.modalBody {
+  background-color: #fbff8b;
+  max-height: 60vh;
+  color: #009bcf;
+  padding: 0;
+  overflow: auto;
+  border-radius: 16px;
+  min-width: 600px;
+  width: 50% !important;
+  box-shadow: 0 0 50px rgba(0, 192, 255, 0.97);
 }

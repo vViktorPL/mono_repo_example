@@ -1,0 +1,18 @@
+.ant-modal-content.ant-modal-content {
+  position: relative;
+  background-color: transparent;
+  padding: 0;
+  margin: 10px;
+  border: 0;
+  border-radius: 0;
+  background-clip: padding-box;
+  box-shadow: none;
+
+  .ant-modal-content {
+    background-color: transparent;
+  }
+
+  .ant-modal-close.ant-modal-close {
+    color: inherit;
+  }
+}

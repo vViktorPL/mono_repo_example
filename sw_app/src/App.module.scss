@@ -2,15 +2,25 @@
   background: black;
 }
 
-.appContent {
-  flex: 1 0 auto;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 1000px;
+.characterTile {
+  background-color: #999;
+  color: yellow;
 }
 
 .appFooter {
   flex: 0 0 10%;
+  display: flex;
+  align-items: center;
+}
+
+.modalBody {
+  background-color: #999;
+  max-height: 60vh;
+  color: yellow;
+  padding: 0;
+  overflow: auto;
+  border-radius: 16px;
+  min-width: 600px;
+  width: 50% !important;
+  box-shadow: 0 0 50px white;
 }

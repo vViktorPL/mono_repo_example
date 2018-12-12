@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-import {Header, Button, Pagination, AppContainer, DataSource} from 'library';
+import {ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header} from 'library';
+import logo from './starwars.png';
 import * as styles from './App.module.scss';
-import {CharacterTile} from "./character-tile/character-tile.component";
+import {CharacterDetails} from "./character-details/character-details.component";
 
 class App extends Component {
   state = {
     page: 1,
+    selectionUrl: null,
   };
 
   updatePage = (page) => {
@@ -14,25 +16,39 @@ class App extends Component {
     });
   };
 
-  onCharacterSelection = (url: string) => {
+  onCharacterSelection = (selectionUrl: string) => {
+    this.setState({
+      selectionUrl,
+    })
+  };
 
+  onClose = () => {
+    this.setState({
+      selectionUrl: null,
+    });
   };
 
   render() {
     return (
       <AppContainer className={styles.appBackground}>
-        <div className={styles.appContent}>
+        <Header img={logo}/>
+        <ListWrapper
+          fadeFrom="rgba(0, 0, 0, 1)"
+          fadeTo="rgba(0, 0, 0, 0)"
+        >
           <DataSource url={`https://swapi.co/api/people/?page=${this.state.page}`}>
             {(data) => (
               data.results.map(character => (
-                <CharacterTile
+                <Tile
+                  key={character.name}
                   {...character}
-                  onClick={this.onCharacterSelection()}
+                  className={styles.characterTile}
+                  onClick={this.onCharacterSelection}
                 />
               ))
             )}
           </DataSource>
-        </div>
+        </ListWrapper>
         <div className={styles.appFooter}>
           <Pagination
             pageSize={1}
@@ -41,21 +57,26 @@ class App extends Component {
             onChange={this.updatePage}
           />
         </div>
+        <Modal
+          className={styles.modalBody}
+          visible={!!this.state.selectionUrl}
+          onCancel={this.onClose}
+        >
+          {this.state.selectionUrl && (
+            <DataSource url={this.state.selectionUrl}>
+              {(data) => {
+                return (
+                  <CharacterDetails
+                    {...data}
+                  />
+                )
+              }}
+            </DataSource>
+          )}
+        </Modal>
       </AppContainer>
     );
   }
 }
 
 export default App;
-
-//Modal.info({
-//  iconType: 'none',
-//  content: (
-//    <div>
-//      <p>some messages...some messages...</p>
-//      <p>some messages...some messages...</p>
-//    </div>
-//  ),
-//  onOk() {},
-//  okText: 'close',
-//});

@@ -32,7 +32,7 @@ export class DataSource extends Component<DataSourceProps, DataSourceState> {
       data: null,
       error: null,
       fetchedUrl: this.props.url,
-    }, () => fetch(this.props.url)
+    }, () => setTimeout(() => fetch(this.props.url)
       .then(data => data.json())
       .then((result => this.setState({
         data: result,
@@ -45,7 +45,7 @@ export class DataSource extends Component<DataSourceProps, DataSourceState> {
           data: null,
           error: "Something went wrong"
         })
-      }));
+      })));
 
   };
 
