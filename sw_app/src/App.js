@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header} from 'library';
+import {ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource} from 'library';
+import {Header} from 'localization';
 import logo from './starwars.png';
 import * as styles from './App.module.scss';
 import {CharacterDetails} from "./character-details/character-details.component";
