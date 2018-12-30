@@ -1,0 +1,542 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`character-details renders correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CharacterDetails
+    birth_year="1989"
+    eye_color="green"
+    height="1337"
+    mass="100"
+    name="test-name"
+    url="test-url.com"
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className=""
+        >
+          test-name
+        </div>,
+        <div
+          className=""
+        >
+          <TranslatedMessage
+            localeKey="height"
+          />
+          <span>
+            1337
+          </span>
+        </div>,
+        <div
+          className=""
+        >
+          <TranslatedMessage
+            localeKey="mass"
+          />
+          <span>
+            100
+          </span>
+        </div>,
+        <div
+          className=""
+        >
+          <TranslatedMessage
+            localeKey="eyeColor"
+          />
+          <span
+            style={
+              Object {
+                "backgroundColor": "green",
+              }
+            }
+          />
+        </div>,
+        <div
+          className=""
+        >
+          <TranslatedMessage
+            localeKey="birthDay"
+          />
+          <span>
+            1989
+          </span>
+        </div>,
+      ],
+      "className": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "test-name",
+          "className": "",
+        },
+        "ref": null,
+        "rendered": "test-name",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TranslatedMessage
+              localeKey="height"
+            />,
+            <span>
+              1337
+            </span>,
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "localeKey": "height",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "1337",
+            },
+            "ref": null,
+            "rendered": "1337",
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TranslatedMessage
+              localeKey="mass"
+            />,
+            <span>
+              100
+            </span>,
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "localeKey": "mass",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "100",
+            },
+            "ref": null,
+            "rendered": "100",
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TranslatedMessage
+              localeKey="eyeColor"
+            />,
+            <span
+              style={
+                Object {
+                  "backgroundColor": "green",
+                }
+              }
+            />,
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "localeKey": "eyeColor",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": undefined,
+              "style": Object {
+                "backgroundColor": "green",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <TranslatedMessage
+              localeKey="birthDay"
+            />,
+            <span>
+              1989
+            </span>,
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "localeKey": "birthDay",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "1989",
+            },
+            "ref": null,
+            "rendered": "1989",
+            "type": "span",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className=""
+          >
+            test-name
+          </div>,
+          <div
+            className=""
+          >
+            <TranslatedMessage
+              localeKey="height"
+            />
+            <span>
+              1337
+            </span>
+          </div>,
+          <div
+            className=""
+          >
+            <TranslatedMessage
+              localeKey="mass"
+            />
+            <span>
+              100
+            </span>
+          </div>,
+          <div
+            className=""
+          >
+            <TranslatedMessage
+              localeKey="eyeColor"
+            />
+            <span
+              style={
+                Object {
+                  "backgroundColor": "green",
+                }
+              }
+            />
+          </div>,
+          <div
+            className=""
+          >
+            <TranslatedMessage
+              localeKey="birthDay"
+            />
+            <span>
+              1989
+            </span>
+          </div>,
+        ],
+        "className": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "test-name",
+            "className": "",
+          },
+          "ref": null,
+          "rendered": "test-name",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TranslatedMessage
+                localeKey="height"
+              />,
+              <span>
+                1337
+              </span>,
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "localeKey": "height",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "1337",
+              },
+              "ref": null,
+              "rendered": "1337",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TranslatedMessage
+                localeKey="mass"
+              />,
+              <span>
+                100
+              </span>,
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "localeKey": "mass",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "100",
+              },
+              "ref": null,
+              "rendered": "100",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TranslatedMessage
+                localeKey="eyeColor"
+              />,
+              <span
+                style={
+                  Object {
+                    "backgroundColor": "green",
+                  }
+                }
+              />,
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "localeKey": "eyeColor",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": undefined,
+                "style": Object {
+                  "backgroundColor": "green",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TranslatedMessage
+                localeKey="birthDay"
+              />,
+              <span>
+                1989
+              </span>,
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "localeKey": "birthDay",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "1989",
+              },
+              "ref": null,
+              "rendered": "1989",
+              "type": "span",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -16,25 +16,29 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-import React, { PureComponent } from 'react';
-import { Button as AntButton } from 'antd';
-export var Button =
+import React from 'react';
+import { LocalizationContext } from "../localization-context/localization.context";
+export var TranslatedMessage =
 /*#__PURE__*/
-function (_PureComponent) {
-  _inherits(Button, _PureComponent);
+function (_React$Component) {
+  _inherits(TranslatedMessage, _React$Component);
 
-  function Button() {
-    _classCallCheck(this, Button);
+  function TranslatedMessage() {
+    _classCallCheck(this, TranslatedMessage);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Button).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(TranslatedMessage).apply(this, arguments));
   }
 
-  _createClass(Button, [{
+  _createClass(TranslatedMessage, [{
     key: "render",
     value: function render() {
-      return React.createElement(AntButton, this.props);
+      var _this = this;
+
+      return React.createElement(LocalizationContext.Consumer, null, function (localizations) {
+        return localizations[_this.props.localeKey] || _this.props.localeKey;
+      });
     }
   }]);
 
-  return Button;
-}(PureComponent);
+  return TranslatedMessage;
+}(React.Component);

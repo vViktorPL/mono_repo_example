@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
-import {ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource} from 'library';
-import {Header} from 'localization';
+import {ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header} from 'library';
+import {LocalizationProvider} from 'localization';
 import logo from './starwars.png';
 import * as styles from './App.module.scss';
 import {CharacterDetails} from "./character-details/character-details.component";
+
+const localization = {
+  pl: {
+    height: "wzrost",
+    mass: "waga",
+    eyeColor: "kolor oczu",
+    birthDay: "data urodzenia",
+  },
+};
 
 class App extends Component {
   state = {
@@ -32,49 +41,51 @@ class App extends Component {
   render() {
     return (
       <AppContainer className={styles.appBackground}>
-        <Header img={logo}/>
-        <ListWrapper
-          fadeFrom="rgba(0, 0, 0, 1)"
-          fadeTo="rgba(0, 0, 0, 0)"
-        >
-          <DataSource url={`https://swapi.co/api/people/?page=${this.state.page}`}>
-            {(data) => (
-              data.results.map(character => (
-                <Tile
-                  key={character.name}
-                  {...character}
-                  className={styles.characterTile}
-                  onClick={this.onCharacterSelection}
-                />
-              ))
-            )}
-          </DataSource>
-        </ListWrapper>
-        <div className={styles.appFooter}>
-          <Pagination
-            pageSize={1}
-            current={this.state.page}
-            total={9}
-            onChange={this.updatePage}
-          />
-        </div>
-        <Modal
-          className={styles.modalBody}
-          visible={!!this.state.selectionUrl}
-          onCancel={this.onClose}
-        >
-          {this.state.selectionUrl && (
-            <DataSource url={this.state.selectionUrl}>
-              {(data) => {
-                return (
-                  <CharacterDetails
-                    {...data}
+        <LocalizationProvider localization={localization} lang="pl">
+          <Header img={logo}/>
+          <ListWrapper
+            fadeFrom="rgba(0, 0, 0, 1)"
+            fadeTo="rgba(0, 0, 0, 0)"
+          >
+            <DataSource url={`https://swapi.co/api/people/?page=${this.state.page}`}>
+              {(data) => (
+                data.results.map(character => (
+                  <Tile
+                    key={character.name}
+                    {...character}
+                    className={styles.characterTile}
+                    onClick={this.onCharacterSelection}
                   />
-                )
-              }}
+                ))
+              )}
             </DataSource>
-          )}
-        </Modal>
+          </ListWrapper>
+          <div className={styles.appFooter}>
+            <Pagination
+              pageSize={1}
+              current={this.state.page}
+              total={9}
+              onChange={this.updatePage}
+            />
+          </div>
+          <Modal
+            className={styles.modalBody}
+            visible={!!this.state.selectionUrl}
+            onCancel={this.onClose}
+          >
+            {this.state.selectionUrl && (
+              <DataSource url={this.state.selectionUrl}>
+                {(data) => {
+                  return (
+                    <CharacterDetails
+                      {...data}
+                    />
+                  )
+                }}
+              </DataSource>
+            )}
+          </Modal>
+        </LocalizationProvider>
       </AppContainer>
     );
   }

@@ -4,9 +4,9 @@
 
 .characterTile {
   background-color: #999;
-  color: yellow;
+  color: rgba(251, 221, 42, 1);
   border-radius: 0;
-  box-shadow: -5px -5px 0 yellow;
+  box-shadow: -5px -5px 0 rgba(251, 221, 42, 1);
   margin: 10px;
 }
 
@@ -19,11 +19,10 @@
 .modalBody {
   background-color: #999;
   max-height: 60vh;
-  color: yellow;
+  color: rgba(251, 221, 42, 1);
   padding: 0;
   overflow: auto;
-  border-radius: 16px;
   min-width: 600px;
   width: 50% !important;
-  box-shadow: 0 0 50px white;
+  box-shadow: 10px 10px 0 rgba(251, 221, 42, 1);
 }

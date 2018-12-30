@@ -16,25 +16,32 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-import React, { PureComponent } from 'react';
-import { Button as AntButton } from 'antd';
-export var Button =
+import React from 'react';
+import { LocalizationContext } from "../localization-context/localization.context";
+export var LocalizationProvider =
 /*#__PURE__*/
-function (_PureComponent) {
-  _inherits(Button, _PureComponent);
+function (_React$Component) {
+  _inherits(LocalizationProvider, _React$Component);
 
-  function Button() {
-    _classCallCheck(this, Button);
+  function LocalizationProvider() {
+    _classCallCheck(this, LocalizationProvider);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Button).apply(this, arguments));
+    return _possibleConstructorReturn(this, _getPrototypeOf(LocalizationProvider).apply(this, arguments));
   }
 
-  _createClass(Button, [{
+  _createClass(LocalizationProvider, [{
     key: "render",
     value: function render() {
-      return React.createElement(AntButton, this.props);
+      var _this$props = this.props,
+          children = _this$props.children,
+          localization = _this$props.localization,
+          lang = _this$props.lang;
+      var selectedLocale = localization ? localization[lang] : {};
+      return React.createElement(LocalizationContext.Provider, {
+        value: selectedLocale
+      }, children);
     }
   }]);
 
-  return Button;
-}(PureComponent);
+  return LocalizationProvider;
+}(React.Component);

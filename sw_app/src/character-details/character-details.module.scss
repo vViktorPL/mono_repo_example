@@ -1,6 +1,44 @@
 .tile {
   margin: 10px;
   display: flex;
-  background-color: rgba(255, 255, 255, .5);
-  color: yellow;
+  background-color: #999;
+  color: rgba(251, 221, 42, 1);
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 300;
+  margin: 20px;
+  justify-content: center;
+}
+
+.row {
+  padding: 0 50px;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.col100 {
+  flex: 0 0 100%;
+}
+
+.col50 {
+  flex: 0 0 50%;
+}
+
+.color {
+  display: inline-flex;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: 1px solid black;
 }
