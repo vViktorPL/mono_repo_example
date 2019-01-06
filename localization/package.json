@@ -8,10 +8,11 @@
   ],
   "dependencies": {},
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
+    "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__ && yarn build:flow",
+    "build:flow": "flow-copy-source -v -i '**/*.spec.{js,jsx}' src dist",
     "test": "react-scripts test",
     "flow": "flow",
-    "prettify": "./node_modules/prettier/bin-prettier.js --write \"src/**/*.{js,jsx}\""
+    "prettify": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +36,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "flow-bin": "^0.89.0",
+    "flow-copy-source": "^2.0.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2"

@@ -1,17 +1,25 @@
+// @flow
+
 import React, { Component } from 'react';
 import { ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header } from 'library';
-import { LocalizationProvider } from 'localization';
+import { LocalizationProvider } from 'localization/dist/localization-provider/localization-provider';
 import logo from './starwars.png';
 import * as styles from './App.module.scss';
 import { CharacterDetails } from './character-details/character-details.component';
 
-class App extends Component {
+type AppProps = {};
+type AppState = {
+  page: number,
+  selectionUrl: ?string,
+};
+
+class App extends Component<AppProps, AppState> {
   state = {
     page: 1,
     selectionUrl: null,
   };
 
-  updatePage = page => {
+  updatePage = (page: number) => {
     this.setState({
       page,
     });
@@ -38,7 +46,7 @@ class App extends Component {
               <Header img={logo} />
               <ListWrapper fadeFrom="rgba(0, 0, 0, 1)" fadeTo="rgba(0, 0, 0, 0)">
                 <DataSource url={`https://swapi.co/api/people/?page=${this.state.page}`}>
-                  {data =>
+                  {(data: *) =>
                     data.results.map(character => (
                       <Tile
                         key={character.name}
@@ -67,7 +75,7 @@ class App extends Component {
               <Modal className={styles.modalBody} visible={!!this.state.selectionUrl} onCancel={this.onClose}>
                 {this.state.selectionUrl && (
                   <DataSource url={this.state.selectionUrl}>
-                    {data => {
+                    {(data: *) => {
                       return <CharacterDetails {...data} />;
                     }}
                   </DataSource>

@@ -1,0 +1,20 @@
+{
+  "name": "mono_repo_example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/qh4r/mono_repo_example.git",
+  "author": "Rafał Kucharski <rafal.kucharski@thesoftwarehouse.pl>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "library", "localization", "localization_api", "pokemon_app", "sw_app"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "test": "lerna run test --stream",
+    "flow": "lerna run flow"
+  },
+  "devDependencies": {
+    "lerna": "^3.8.5"
+  }
+}

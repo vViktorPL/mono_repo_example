@@ -1,3 +1,5 @@
+// @flow
+
 import React, { Component, Fragment } from 'react';
 import { ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header } from 'library';
 import * as styles from './App.module.scss';

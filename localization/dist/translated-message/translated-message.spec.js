@@ -14,26 +14,26 @@ var getTranslatedMessageWithContext = function getTranslatedMessageWithContext(c
   return require('./translated-message').TranslatedMessage;
 };
 
-describe("translated message", function () {
+describe('translated message', function () {
   beforeEach(function () {
     jest.resetModules();
   });
-  it("renders message if localeKey match", function () {
+  it('renders message if localeKey match', function () {
     var context = {
-      key1: "value1",
-      key2: "value2"
+      key1: 'value1',
+      key2: 'value2'
     };
     var TranslatedMessage = getTranslatedMessageWithContext(context);
     var component = shallow(React.createElement(TranslatedMessage, {
       localeKey: "key2"
     })).dive();
-    expect(component.text()).toBe("value2");
+    expect(component.text()).toBe('value2');
   });
-  it("renders key as fallback if localeKey do not match", function () {
+  it('renders key as fallback if localeKey do not match', function () {
     var TranslatedMessage = getTranslatedMessageWithContext({});
     var component = shallow(React.createElement(TranslatedMessage, {
       localeKey: "key2"
     })).dive();
-    expect(component.text()).toBe("key2");
+    expect(component.text()).toBe('key2');
   });
 });
