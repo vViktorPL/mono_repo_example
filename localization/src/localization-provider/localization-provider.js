@@ -1,12 +1,12 @@
 // @flow
 
 import React from 'react';
-import {LocalizationContext} from "../localization-context/localization.context";
+import { LocalizationContext } from '../localization-context/localization.context';
 
 export type LocalizationsType = {
   [locale: string]: {
-    [key: string]: string
-  }
+    [key: string]: string,
+  },
 };
 
 export type LocalizationProviderProps = {

@@ -1,14 +1,14 @@
 // @flow
-import React, {Component} from 'react';
-import type {Node} from 'react';
-import {Spin} from 'antd';
+import React, { Component } from 'react';
+import type { Node } from 'react';
+import { Spin } from 'antd';
 import * as styles from './data-source.module.scss';
-import {Button} from "..";
+import { Button } from '..';
 import classNames from 'classnames';
 
 export type DataSourceProps = {
   url: string,
-  children: * => Node,
+  children: (*) => Node,
 };
 
 export type DataSourceState = {
@@ -27,26 +27,33 @@ export class DataSource extends Component<DataSourceProps, DataSourceState> {
   };
 
   loadData = () => {
-    this.setState({
-      loading: true,
-      data: null,
-      error: null,
-      fetchedUrl: this.props.url,
-    }, () => setTimeout(() => fetch(this.props.url)
-      .then(data => data.json())
-      .then((result => this.setState({
-        data: result,
+    this.setState(
+      {
+        loading: true,
+        data: null,
         error: null,
-        loading: false,
-      })))
-      .catch(() => {
-        this.setState({
-          loading: false,
-          data: null,
-          error: "Something went wrong"
-        })
-      })));
-
+        fetchedUrl: this.props.url,
+      },
+      () =>
+        setTimeout(() =>
+          fetch(this.props.url)
+            .then(data => data.json())
+            .then(result =>
+              this.setState({
+                data: result,
+                error: null,
+                loading: false,
+              })
+            )
+            .catch(() => {
+              this.setState({
+                loading: false,
+                data: null,
+                error: 'Something went wrong',
+              });
+            })
+        )
+    );
   };
 
   componentDidMount() {
@@ -54,20 +61,19 @@ export class DataSource extends Component<DataSourceProps, DataSourceState> {
   }
 
   componentDidUpdate() {
-    if(this.props.url !== this.state.fetchedUrl) {
+    if (this.props.url !== this.state.fetchedUrl) {
       this.loadData();
     }
   }
 
   render() {
-    const {children} = this.props;
-    const {loading, data, error} = this.state;
-
+    const { children } = this.props;
+    const { loading, data, error } = this.state;
 
     if (loading)
       return (
         <div className={styles.center}>
-          <Spin size="large"/>
+          <Spin size="large" />
         </div>
       );
 
@@ -75,7 +81,9 @@ export class DataSource extends Component<DataSourceProps, DataSourceState> {
       return (
         <div className={classNames(styles.center, styles.error)}>
           {error}
-          <Button className={styles.errorBtn} onClick={this.loadData}>Retry</Button>
+          <Button className={styles.errorBtn} onClick={this.loadData}>
+            Retry
+          </Button>
         </div>
       );
     }

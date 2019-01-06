@@ -1,5 +1,11 @@
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -18,6 +24,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 import React, { PureComponent } from 'react';
 import { Pagination as AntdPagination } from 'antd';
+import './pagination.scss';
 export var Pagination =
 /*#__PURE__*/
 function (_PureComponent) {
@@ -32,7 +39,24 @@ function (_PureComponent) {
   _createClass(Pagination, [{
     key: "render",
     value: function render() {
-      return React.createElement(AntdPagination, this.props);
+      var _this$props = this.props,
+          colors = _this$props.colors,
+          rest = _objectWithoutProperties(_this$props, ["colors"]);
+
+      var _ref = colors || {},
+          color = _ref.color,
+          colorActive = _ref.colorActive,
+          backgroundColor = _ref.backgroundColor,
+          backgroundColorActive = _ref.backgroundColorActive;
+
+      return React.createElement(AntdPagination, _extends({
+        style: {
+          '--pagination-bg-color': backgroundColor,
+          '--pagination-bg-color--active': backgroundColorActive,
+          '--pagination-color': color,
+          '--pagination-color--active': colorActive
+        }
+      }, rest));
     }
   }]);
 

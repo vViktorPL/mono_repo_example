@@ -1,11 +1,10 @@
 // @flow
-import React, {PureComponent} from 'react';
-import {Modal as AntModal} from 'antd';
+import React, { PureComponent } from 'react';
+import { Modal as AntModal } from 'antd';
 import './modal.scss';
 
 export type ModalProps = {
   footerClassName?: string,
-
 };
 
 export class Modal extends PureComponent<ModalProps> {
@@ -19,6 +18,6 @@ export class Modal extends PureComponent<ModalProps> {
           backgroundColor: 'inherit',
         }}
       />
-    )
+    );
   }
 }

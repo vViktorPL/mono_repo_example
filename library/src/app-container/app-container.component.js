@@ -10,10 +10,6 @@ export type AppContainerProps = {
   className: string,
 };
 
-export const AppContainer = ({children, className}: AppContainerProps) => (
-  <div
-    className={classNames(styles.appContainer, className)}
-  >
-    {children}
-  </div>
+export const AppContainer = ({ children, className }: AppContainerProps) => (
+  <div className={classNames(styles.appContainer, className)}>{children}</div>
 );

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
-    "start-dev": "pm2-dev ./src/index.js"
+    "start": "pm2-dev ./src/index.js"
   },
   "author": "",
   "license": "ISC",

@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "library": "../library/",
+    "localization": "../localization",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
@@ -11,7 +13,8 @@
     "start": "PORT=3002 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettify": "./node_modules/prettier/bin-prettier.js --write \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,6 +27,7 @@
   ],
   "devDependencies": {
     "flow-bin": "^0.89.0",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "prettier": "^1.15.3"
   }
 }

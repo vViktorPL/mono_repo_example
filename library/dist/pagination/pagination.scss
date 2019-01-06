@@ -1,0 +1,22 @@
+.ant-pagination-item, .ant-pagination-prev, .ant-pagination-next {
+  border-color: var(--pagination-color) !important;
+  background-color: var(--pagination-bg-color) !important;
+
+  a {
+    color: var(--pagination-color) !important;
+  }
+
+  &.ant-pagination-item-active {
+    border-color: var(--pagination-color--active) !important;
+    background-color: var(--pagination-bg-color--active) !important;
+
+    a {
+      color: var(--pagination-color--active) !important;
+    }
+  }
+}
+
+.ant-pagination-item-link {
+  background-color: var(--pagination-bg-color) !important;
+  border-color: var(--pagination-color) !important;
+}
