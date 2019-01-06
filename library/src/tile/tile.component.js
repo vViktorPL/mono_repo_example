@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
-import * as styles from './tile.module.scss';
+import * as styles from './tile.module.css';
 
 export type TileProps = {
   name: string,

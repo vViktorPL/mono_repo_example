@@ -17,7 +17,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 import React, { PureComponent } from 'react';
-import * as styles from "./header.module.scss";
+import * as styles from './header.module.css';
 export var Header =
 /*#__PURE__*/
 function (_PureComponent) {

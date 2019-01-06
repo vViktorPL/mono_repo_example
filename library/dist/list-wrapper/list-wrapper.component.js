@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as styles from './list-wrapper.module.scss';
+import * as styles from './list-wrapper.module.css';
 export var ListWrapper = function ListWrapper(_ref) {
   var children = _ref.children,
       fadeFrom = _ref.fadeFrom,

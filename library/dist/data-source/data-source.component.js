@@ -18,8 +18,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 import React, { Component } from 'react';
 import { Spin } from 'antd';
-import * as styles from './data-source.module.scss';
-import { Button } from "..";
+import * as styles from './data-source.module.css';
+import { Button } from '..';
 import classNames from 'classnames';
 export var DataSource =
 /*#__PURE__*/
@@ -62,7 +62,7 @@ function (_Component) {
             _this.setState({
               loading: false,
               data: null,
-              error: "Something went wrong"
+              error: 'Something went wrong'
             });
           });
         });

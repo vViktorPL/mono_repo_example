@@ -5312,7 +5312,7 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-library@../library/:
+library@../library:
   version "0.1.0"
   dependencies:
     antd "^3.11.1"

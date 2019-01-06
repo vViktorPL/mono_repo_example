@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
 import { Pagination as AntdPagination } from 'antd';
-import './pagination.scss';
+import './pagination.css';
 
 export type PaginationProps = {
   colors?: {

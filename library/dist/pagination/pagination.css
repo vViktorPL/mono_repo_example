@@ -1,0 +1,17 @@
+.ant-pagination-item, .ant-pagination-prev, .ant-pagination-next, .ant-pagination-item-link {
+  border-color: var(--pagination-color) !important;
+  background-color: var(--pagination-bg-color) !important;
+}
+
+.ant-pagination-item a, .ant-pagination-prev a, .ant-pagination-next a {
+  color: var(--pagination-color) !important;
+}
+
+.ant-pagination-item.ant-pagination-item-active {
+  border-color: var(--pagination-color--active) !important;
+  background-color: var(--pagination-bg-color--active) !important;
+}
+
+.ant-pagination-item.ant-pagination-item-active a {
+  color: var(--pagination-color--active) !important;
+}

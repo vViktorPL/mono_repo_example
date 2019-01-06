@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react';
-import * as styles from './header.module.scss';
+import * as styles from './header.module.css';
 
 export type HeaderProps = {
   img: string,

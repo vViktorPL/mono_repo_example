@@ -24,7 +24,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 import React, { PureComponent } from 'react';
 import { Pagination as AntdPagination } from 'antd';
-import './pagination.scss';
+import './pagination.css';
 export var Pagination =
 /*#__PURE__*/
 function (_PureComponent) {

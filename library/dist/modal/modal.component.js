@@ -20,7 +20,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 import React, { PureComponent } from 'react';
 import { Modal as AntModal } from 'antd';
-import './modal.scss';
+import './modal.css';
 export var Modal =
 /*#__PURE__*/
 function (_PureComponent) {

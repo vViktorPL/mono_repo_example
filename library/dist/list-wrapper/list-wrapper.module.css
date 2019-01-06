@@ -17,10 +17,10 @@
   overflow-x: hidden;
   overflow-y: scroll;
   flex: 1 1 0;
+}
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+.list::-webkit-scrollbar {
+  display: none;
 }
 
 .topOverlay {
@@ -28,7 +28,6 @@
   top: 0;
   width: 100%;
   height: 100px;
-  //background-image: linear-gradient(rgba(0, 192, 255, 0.97), rgba(0, 192, 255, 0));
 }
 
 .bottomOverlay {
@@ -36,5 +35,4 @@
   bottom: 0;
   width: 100%;
   height: 100px;
-  //background-image: linear-gradient(rgba(0, 192, 255, 0), rgba(0, 192, 255, 0.97));
 }

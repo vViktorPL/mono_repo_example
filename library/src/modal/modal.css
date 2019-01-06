@@ -7,12 +7,12 @@
   border-radius: 0;
   background-clip: padding-box;
   box-shadow: none;
+}
 
-  .ant-modal-content {
-    background-color: transparent;
-  }
+.ant-modal-content.ant-modal-content .ant-modal-content {
+  background-color: transparent;
+}
 
-  .ant-modal-close.ant-modal-close {
-    color: inherit;
-  }
+.ant-modal-content.ant-modal-content .ant-modal-close.ant-modal-close {
+  color: inherit;
 }

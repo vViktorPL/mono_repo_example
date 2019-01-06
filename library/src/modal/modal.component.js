@@ -1,7 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
 import { Modal as AntModal } from 'antd';
-import './modal.scss';
+import './modal.css';
 
 export type ModalProps = {
   footerClassName?: string,

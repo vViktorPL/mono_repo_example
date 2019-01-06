@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import type { Node } from 'react';
 import { Spin } from 'antd';
-import * as styles from './data-source.module.scss';
+import * as styles from './data-source.module.css';
 import { Button } from '..';
 import classNames from 'classnames';
 

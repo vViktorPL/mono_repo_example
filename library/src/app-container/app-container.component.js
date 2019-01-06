@@ -1,9 +1,9 @@
 // @flow
 
 import * as React from 'react';
-import './app-container.scss';
+import './app-container.css';
 import classNames from 'classnames';
-import * as styles from './app-container.module.scss';
+import * as styles from './app-container.module.css';
 
 export type AppContainerProps = {
   children: React.Node,

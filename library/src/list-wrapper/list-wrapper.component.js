@@ -1,7 +1,7 @@
 // @flow
 
 import * as React from 'react';
-import * as styles from './list-wrapper.module.scss';
+import * as styles from './list-wrapper.module.css';
 
 export type ListWrapperProps = {
   children: React.Node,

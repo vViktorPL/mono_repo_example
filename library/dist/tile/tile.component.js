@@ -18,7 +18,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
-import * as styles from "./tile.module.scss";
+import * as styles from './tile.module.css';
 export var Tile =
 /*#__PURE__*/
 function (_PureComponent) {
