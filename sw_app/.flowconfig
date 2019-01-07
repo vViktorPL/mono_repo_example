@@ -1,12 +1,8 @@
 [ignore]
-.*/node_modules/.*
-.*/build/.*
-../library/.*
 
 [include]
 
 [libs]
-flow-typed
 
 [lints]
 
@@ -18,4 +14,4 @@ module.file_ext=.css
 module.file_ext=.scss
 module.name_mapper.extension='css' -> 'empty/object'
 module.name_mapper.extension='scss' -> 'empty/object'
-
+module.ignore_non_literal_requires=true

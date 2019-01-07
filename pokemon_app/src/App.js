@@ -1,16 +1,24 @@
+// @flow
+
 import React, { Component, Fragment } from 'react';
 import { ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header } from 'library';
 import * as styles from './App.module.scss';
 import logo from './pokemon.png';
 import { PokemonDetails } from './pokemon-details/pokemon-details.component';
 
-class App extends Component {
+type AppProps = {};
+type AppState = {
+  page: number,
+  selectionUrl: ?string,
+};
+
+class App extends Component<AppProps, AppState> {
   state = {
     page: 1,
     selectionUrl: null,
   };
 
-  updatePage = page => {
+  updatePage = (page: number) => {
     this.setState({
       page,
     });
