@@ -1,4 +1,5 @@
 // @flow
+
 import React, { PureComponent } from 'react';
 import { TranslatedMessage } from 'localization';
 import classNames from 'classnames';

@@ -1,11 +1,8 @@
 [ignore]
-.*/node_modules/.*
-.*/build/.*
 
 [include]
 
 [libs]
-flow-typed
 
 [lints]
 
@@ -17,4 +14,8 @@ module.file_ext=.css
 module.file_ext=.scss
 module.name_mapper.extension='css' -> 'empty/object'
 module.name_mapper.extension='scss' -> 'empty/object'
-
+module.ignore_non_literal_requires=true
+module.name_mapper='library' -> 'library/src/index'
+module.name_mapper='library\/dist/\(.+\)' -> 'library/src/\1'
+module.name_mapper='localization' -> '../localization/src/index'
+module.name_mapper='localization\/dist/\(.+\)' -> '../localization/src/\1'

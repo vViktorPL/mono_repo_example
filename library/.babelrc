@@ -12,9 +12,8 @@
     "@babel/preset-react"
   ],
   "plugins": [
+    "transform-flow-strip-types",
     "syntax-dynamic-import",
-    "dynamic-import-node",
     "transform-class-properties",
-    "transform-flow-strip-types"
   ]
 }

@@ -7,7 +7,11 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "library", "localization", "localization_api", "pokemon_app", "sw_app"
+    "library",
+    "localization",
+    "localization_api",
+    "pokemon_app",
+    "sw_app"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -15,6 +19,7 @@
     "flow": "lerna run flow"
   },
   "devDependencies": {
+    "flow-mono-cli": "^1.4.3",
     "lerna": "^3.8.5"
   }
 }
