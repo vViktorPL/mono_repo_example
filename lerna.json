@@ -1,10 +1,10 @@
 {
   "packages": [
-    "packages/*",
     "localization_api",
+    "packages/*",
     "pokemon_app",
     "sw_app"
   ],
   "npmClient": "npm",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
