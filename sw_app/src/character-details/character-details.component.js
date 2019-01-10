@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
-import { TranslatedMessage } from 'localization';
+import { TranslatedMessage } from '@qh4r/localization';
 import classNames from 'classnames';
 import * as styles from './character-details.module.scss';
 

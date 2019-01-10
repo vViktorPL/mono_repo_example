@@ -1,4 +1,4 @@
-FROM node:10.15 as pokemon-build
+FROM node:10.15 as star-wars-build
 WORKDIR /app
 COPY package*.json ./
 RUN npm i
@@ -7,6 +7,6 @@ COPY . ./
 RUN npm run build
 
 FROM nginx:alpine
-COPY --from=pokemon-build /app/build /usr/share/nginx/html
+COPY --from=star-wars-build /app/build /usr/share/nginx/html
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
