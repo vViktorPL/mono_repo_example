@@ -5,16 +5,8 @@
   "repository": "https://github.com/qh4r/mono_repo_example.git",
   "author": "Rafał Kucharski <rafal.kucharski@thesoftwarehouse.pl>",
   "license": "MIT",
-  "private": true,
-  "workspaces": [
-    "library",
-    "localization",
-    "localization_api",
-    "pokemon_app",
-    "sw_app"
-  ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna bootstrap --hoist",
     "test": "lerna run test --stream",
     "flow": "lerna run flow"
   },

@@ -1,9 +1,12 @@
 {
-  "name": "localization",
+  "name": "@qh4r/localization",
   "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "jsnext:main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__ && yarn build:flow",
     "build:flow": "flow-copy-source -v -i '**/*.spec.{js,jsx}' src dist",

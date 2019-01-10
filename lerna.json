@@ -1,12 +1,10 @@
 {
   "packages": [
-    "library",
-    "localization",
+    "packages/*",
     "localization_api",
     "pokemon_app",
     "sw_app"
   ],
-  "npmClient": "yarn",
-  "useWorkspaces": true,
+  "npmClient": "npm",
   "version": "1.0.0"
 }

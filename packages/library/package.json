@@ -1,9 +1,12 @@
 {
-  "name": "library",
+  "name": "@qh4r/library",
   "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "jsnext:main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "antd": "^3.11.1",
     "classnames": "^2.2.6"

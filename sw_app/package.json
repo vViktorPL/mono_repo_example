@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
-    "library": "^1.0.0",
-    "localization": "^1.0.0",
+    "@qh4r/library": "^1.0.0",
+    "@qh4r/localization": "^1.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
