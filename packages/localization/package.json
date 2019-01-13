@@ -1,20 +1,20 @@
 {
-  "name": "library",
+  "name": "@qh4r/localization",
   "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "antd": "^3.11.1",
-    "classnames": "^2.2.6"
-  },
+  "dependencies": {},
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
-    "flow": "flow",
     "test": "react-scripts test",
+    "flow": "flow",
     "prettify": "./node_modules/prettier/bin-prettier.js --write \"src/**/*.{js,jsx}\""
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,8 +26,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/cli": "^7.2.0",
-    "@babel/core": "^7.2.0",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
     "@babel/preset-flow": "^7.0.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -37,10 +37,9 @@
     "babel-preset-react": "^6.24.1",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
-    "flow-bin": "^0.87.0",
-    "prettier": "^1.15.3",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "flow-bin": "^0.89.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-scripts": "2.1.2"
   }
 }

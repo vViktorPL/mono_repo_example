@@ -8,6 +8,7 @@
     "test-watch": "jest --watch",
     "start": "pm2-dev ./src/index.js"
   },
+  "private": true,
   "author": "",
   "license": "ISC",
   "dependencies": {

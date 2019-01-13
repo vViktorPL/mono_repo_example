@@ -4,8 +4,8 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
-    "library": "../library",
-    "localization": "../localization",
+    "@qh4r/library": "*",
+    "@qh4r/localization": "*",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
@@ -14,7 +14,7 @@
     "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "flow": "flow",
     "prettify": "./node_modules/prettier/bin-prettier.js --write \"src/**/*.{js,jsx}\""
   },
   "eslintConfig": {
