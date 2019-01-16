@@ -1,8 +1,11 @@
 {
-  "name": "library",
-  "version": "0.1.0",
+  "name": "@qh4r/library",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],

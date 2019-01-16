@@ -1,11 +1,14 @@
 {
-  "name": "localization",
-  "version": "0.1.0",
+  "name": "@qh4r/localization",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {},
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel src --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
