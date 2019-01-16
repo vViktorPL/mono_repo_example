@@ -1,10 +1,10 @@
 {
   "name": "pokemon_app",
-  "version": "0.1.0",
+  "version": "1.0.5",
   "private": true,
   "dependencies": {
-    "@qh4r/library": "^1.0.0",
-    "@qh4r/localization": "^1.0.0",
+    "@qh4r/library": "^1.0.5",
+    "@qh4r/localization": "^1.0.5",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1"
