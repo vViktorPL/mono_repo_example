@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+
+  pokemon-app:
+    container_name: pokemon-app
+    build:
+      context: ./pokemon_app
+      dockerfile: ./Dockerfile
+    ports:
+    - '3002:80'
+
+  star-wars-app:
+    container_name: star-wars-app
+    build:
+      context: ./sw_app
+      dockerfile: ./Dockerfile
+    ports:
+    - '3001:80'
+
+  localization-api:
+    container_name: localization-api
+    build:
+      context: ./localization_api
+      dockerfile: ./Dockerfile
+    ports:
+    - '3000:3000'
