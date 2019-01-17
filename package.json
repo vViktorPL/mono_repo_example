@@ -1,0 +1,18 @@
+{
+  "name": "mono_repo_example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vViktorPL/mono_repo_example.git",
+  "author": "Wiktor Toporek <wiktor@tsh.io>",
+  "license": "MIT",
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist",
+    "test": "CI=true lerna run test --stream",
+    "flow": "lerna run flow",
+    "clean": "lerna clean"
+  },
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.10.5"
+  }
+}

@@ -1,6 +1,6 @@
 // @flow
 import React, { PureComponent } from 'react';
-import { TranslatedMessage } from 'localization';
+import { TranslatedMessage } from '@vviktor/localization';
 import classNames from 'classnames';
 import * as styles from './character-details.module.scss';
 

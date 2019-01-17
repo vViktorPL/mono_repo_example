@@ -1,8 +1,8 @@
 // @flow
 
 import React, { Component } from 'react';
-import { ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header } from 'library';
-import { LocalizationProvider } from 'localization';
+import { ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header } from '@vviktor/library';
+import { LocalizationProvider } from '@vviktor/localization';
 import logo from './starwars.png';
 import * as styles from './App.module.scss';
 import { CharacterDetails } from './character-details/character-details.component';

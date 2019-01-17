@@ -1,7 +1,7 @@
 // @flow
 
 import React, { Component, Fragment } from 'react';
-import { ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header } from 'library';
+import { ListWrapper, Tile, Modal, Pagination, AppContainer, DataSource, Header } from '@vviktor/library';
 import * as styles from './App.module.scss';
 import logo from './pokemon.png';
 import { PokemonDetails } from './pokemon-details/pokemon-details.component';
